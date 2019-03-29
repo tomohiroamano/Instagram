@@ -16,6 +16,11 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
     
+    //課題：コメントボタン、投稿者名、コメントのオブジェクト追加
+    @IBOutlet weak var commentButton: UIButton!
+    @IBOutlet weak var commentName: UILabel!
+    @IBOutlet weak var commentBody: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

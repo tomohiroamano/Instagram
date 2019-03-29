@@ -20,6 +20,11 @@ class PostData: NSObject {
     var likes: [String] = []
     var isLiked: Bool = false
     
+    // 課題：コメントそのもの、コメントした人
+    var commentname: String?
+    var comment: String?
+    
+    
     init(snapshot: DataSnapshot, myId: String) {
         self.id = snapshot.key
         
@@ -34,6 +39,11 @@ class PostData: NSObject {
         
         let time = valueDictionary["time"] as? String
         self.date = Date(timeIntervalSinceReferenceDate: TimeInterval(time!)!)
+        
+        // 課題：コメントに関するじキーを追加
+        self.commentname = valueDictionary["commentname"] as? String
+        self.comment = valueDictionary["comment"] as? String
+        let commenttime = valueDictionary["commenttime"] as? String
         
         if let likes = valueDictionary["likes"] as? [String] {
             self.likes = likes
