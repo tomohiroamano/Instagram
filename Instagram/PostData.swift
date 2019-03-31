@@ -40,10 +40,11 @@ class PostData: NSObject {
         let time = valueDictionary["time"] as? String
         self.date = Date(timeIntervalSinceReferenceDate: TimeInterval(time!)!)
         
-        // 課題：コメントに関するじキーを追加
+        // 課題：コメントに関するキーを追加
         self.commentname = valueDictionary["commentname"] as? String
         self.comment = valueDictionary["comment"] as? String
-        let commenttime = valueDictionary["commenttime"] as? String
+        //let commenttime = valueDictionary["commenttime"] as? String
+        //self.date = Date(timeIntervalSinceReferenceDate: TimeInterval(commenttime!)!)
         
         if let likes = valueDictionary["likes"] as? [String] {
             self.likes = likes

@@ -176,6 +176,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         // 課題：コメントビューコントローラーへの遷移
         let commentViewController = self.storyboard?.instantiateViewController(withIdentifier: "Comment") as! CommentViewController
+        // postDataをcommentViewControllerに引き渡す
+        commentViewController.postData = postData!
+        
         self.present(commentViewController, animated: true, completion: nil)
         
     }

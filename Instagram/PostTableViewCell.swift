@@ -16,9 +16,8 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
     
-    //課題：コメントボタン、投稿者名、コメントのオブジェクト追加
+    //課題：コメントボタン、コメントのオブジェクト追加
     @IBOutlet weak var commentButton: UIButton!
-    @IBOutlet weak var commentName: UILabel!
     @IBOutlet weak var commentBody: UILabel!
     
     override func awakeFromNib() {
@@ -43,6 +42,9 @@ class PostTableViewCell: UITableViewCell {
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
         let dateString = formatter.string(from: postData.date!)
         self.dateLabel.text = dateString
+        
+        // 課題：PostData オブジェクト (インスタンス) の内容をセル内のオブジェクトに反映
+        self.commentBody.text = "\(postData.commentname!) : \(postData.comment!)"
         
         if postData.isLiked {
             let buttonImage = UIImage(named: "like_exist")
