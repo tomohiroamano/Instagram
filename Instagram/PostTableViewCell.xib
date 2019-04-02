@@ -92,9 +92,8 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="captionLabel" destination="aBl-I8-9r9" id="CGd-NX-tHd"/>
-                <outlet property="comment" destination="reE-ul-cR5" id="8KJ-Th-ic7"/>
-                <outlet property="commentBody" destination="reE-ul-cR5" id="PKM-zE-T0J"/>
-                <outlet property="commentButton" destination="745-4h-Lro" id="jXs-vI-XaI"/>
+                <outlet property="commentBody" destination="reE-ul-cR5" id="kLv-95-ibL"/>
+                <outlet property="commentButton" destination="745-4h-Lro" id="nsH-Y1-B5c"/>
                 <outlet property="dateLabel" destination="gi4-ew-9uN" id="xp7-08-weF"/>
                 <outlet property="likeButton" destination="kmF-6S-6n3" id="9Yi-Mi-TCc"/>
                 <outlet property="likeLabel" destination="2Ud-9p-CoI" id="fc2-Sx-Jpb"/>

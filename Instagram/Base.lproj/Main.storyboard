@@ -328,7 +328,7 @@
                                 </constraints>
                                 <state key="normal" title="コメント投稿" backgroundImage="btn"/>
                                 <connections>
-                                    <action selector="commentPostButton:" destination="VEw-Y9-puR" eventType="touchUpInside" id="JLr-oB-c2T"/>
+                                    <action selector="commentPostButton:" destination="VEw-Y9-puR" eventType="touchUpInside" id="3Nc-da-rMf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rN-IH-C3d">
@@ -338,7 +338,7 @@
                                 </constraints>
                                 <state key="normal" title="キャンセル" backgroundImage="btn"/>
                                 <connections>
-                                    <action selector="commentCancelButton:" destination="VEw-Y9-puR" eventType="touchUpInside" id="OWo-YJ-4Ny"/>
+                                    <action selector="commentCancelButton:" destination="VEw-Y9-puR" eventType="touchUpInside" id="EhG-BW-1x1"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="コメントを記載してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Qi-LI-tHP">
@@ -364,7 +364,7 @@
                         <viewLayoutGuide key="safeArea" id="hHh-QO-XZ7"/>
                     </view>
                     <connections>
-                        <outlet property="Commentbody" destination="0Qi-LI-tHP" id="02z-h4-E7V"/>
+                        <outlet property="Commentbody" destination="0Qi-LI-tHP" id="V7J-0i-1XQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pMj-EU-NhL" userLabel="First Responder" sceneMemberID="firstResponder"/>
