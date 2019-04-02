@@ -28,8 +28,16 @@ class CommentViewController: UIViewController {
         // 辞書を作成してFirebaseに保存する
         let postRef = Database.database().reference().child(Const.PostPath)
         
-        // 課題：コメント投稿　コメント、コメント時間、コメントした人の名前(ログイン名)
-        let postDic = ["comment": Commentbody.text!, "commentname": name!]
+        // 課題：コメント投稿　コメント、コメントした人の名前(ログイン名)の配列を用意
+        var commentArray: [String] = []
+        commentArray.append(Commentbody.text!)
+        
+        var nameArray: [String] = []
+        nameArray.append(name!)
+        
+        // 課題：コメントとコメント名に配列を格納
+        let postDic = ["comment": commentArray, "commentname": nameArray]
+        //let postDic = ["comment": Commentbody.text!, "commentname": name!]
         postRef.child(postData.id!).updateChildValues(postDic)
         
         // HUDで投稿完了を表示する
@@ -47,9 +55,6 @@ class CommentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // 課題：受け取ったpostDataをセット？？
-        self.postData = postData!
         
     }
     

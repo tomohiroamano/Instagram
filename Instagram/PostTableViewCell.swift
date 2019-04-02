@@ -44,7 +44,7 @@ class PostTableViewCell: UITableViewCell {
         self.dateLabel.text = dateString
         
         // 課題：PostData オブジェクト (インスタンス) の内容をセル内のオブジェクトに反映
-        self.commentBody.text = "\(postData.commentname!) : \(postData.comment!)"
+        self.commentBody.text = "\(postData.commentname) : \(postData.comment)"
         
         if postData.isLiked {
             let buttonImage = UIImage(named: "like_exist")
