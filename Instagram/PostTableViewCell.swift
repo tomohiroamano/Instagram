@@ -44,7 +44,17 @@ class PostTableViewCell: UITableViewCell {
         self.dateLabel.text = dateString
         
         // 課題：PostData オブジェクト (インスタンス) の内容をセル内のオブジェクトに反映
-        self.commentBody.text = "\(postData.commentname) : \(postData.comment)"
+        // 課題：配列の中身をUILABELに表示させるように修正
+        var commentText = ""
+        let count = postData.comment.count
+        
+        for i in 0..<count {
+            let comment = postData.comment[i]
+            let name = postData.commentname[i]
+            commentText += name + ": " + comment + "\n"
+            self.commentBody.text = commentText
+            //self.commentBody.text = "\(postData.commentname) : \(postData.comment)"
+        }
         
         if postData.isLiked {
             let buttonImage = UIImage(named: "like_exist")

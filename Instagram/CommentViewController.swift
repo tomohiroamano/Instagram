@@ -29,10 +29,12 @@ class CommentViewController: UIViewController {
         let postRef = Database.database().reference().child(Const.PostPath)
         
         // 課題：コメント投稿　コメント、コメントした人の名前(ログイン名)の配列を用意
-        var commentArray: [String] = []
+        // 課題：修正　[]ではなく受け取ったPostData.commentで初期化
+        var commentArray: [String] = postData.comment
         commentArray.append(Commentbody.text!)
         
-        var nameArray: [String] = []
+        // 課題：修正　[]ではなく受け取ったPostData.commentnameで初期化
+        var nameArray: [String] = postData.commentname
         nameArray.append(name!)
         
         // 課題：コメントとコメント名に配列を格納
