@@ -31,12 +31,15 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let nib = UINib(nibName: "PostTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "Cell")
-        
+
         // テーブル行の高さをAutoLayoutで自動調整する
         tableView.rowHeight = UITableView.automaticDimension
+        
         // テーブル行の高さの概算値を設定しておく
         // 高さ概算値 = 「縦横比1:1のUIImageViewの高さ(=画面幅)」+「いいねボタン、キャプションラベル、その他余白の高さの合計概算(=100pt)」
-        tableView.estimatedRowHeight = UIScreen.main.bounds.width + 100
+        // 課題：コメントを追加したためよ高さの概算値を120に修正、automaticDimensionの上に移動
+        tableView.estimatedRowHeight = UIScreen.main.bounds.width + 120
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
