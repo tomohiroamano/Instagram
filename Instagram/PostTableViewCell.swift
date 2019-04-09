@@ -46,6 +46,9 @@ class PostTableViewCell: UITableViewCell {
         // 課題：PostData オブジェクト (インスタンス) の内容をセル内のオブジェクトに反映
         // 課題：配列の中身をUILABELに表示させるように修正
         var commentText = ""
+        // 課題：提出後修正　表示可能最大行数を無制限にする.
+        commentBody.numberOfLines = 0
+        
         let count = postData.comment.count
         
         for i in 0..<count {
@@ -54,6 +57,7 @@ class PostTableViewCell: UITableViewCell {
             commentText += name + ": " + comment + "\n"
             self.commentBody.text = commentText
             //self.commentBody.text = "\(postData.commentname) : \(postData.comment)"
+            print(commentText) // デバッグ
         }
         
         if postData.isLiked {
