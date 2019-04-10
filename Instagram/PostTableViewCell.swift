@@ -51,6 +51,11 @@ class PostTableViewCell: UITableViewCell {
         
         let count = postData.comment.count
         
+        // 課題（提出後追加）：コメントが無しの時のコメント出力を行うロジックを追加
+        if count == 0 {
+            self.commentBody.text = commentText
+        }
+        
         for i in 0..<count {
             let comment = postData.comment[i]
             let name = postData.commentname[i]
